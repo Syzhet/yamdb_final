@@ -158,7 +158,7 @@ class AdminListCreateUser(viewsets.ModelViewSet):
             user = request.user
             serializer = AdminModerUsersSerializer(user)
             return Response(serializer.data, status=HTTP_200_OK)
-        request.method == 'PATCH':
+        request.method == 'PATCH'
         username = request.user.username
         user = get_object_or_404(User, username=username)
         serializer = AdminModerUsersSerializer(
