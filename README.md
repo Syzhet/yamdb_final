@@ -1,6 +1,6 @@
 # Проект yamdb_final
 
-[![yamdb-workflows Actions Status](https://github.com/Syzhet/yamdb_final/workflows/yamdb-workflows/badge.svg)](https://github.com/Syzhet/yamdb_final/actions)
+![yamdb-workflows Actions Status](https://github.com/Syzhet/yamdb_final/workflows/yamdb-workflows/badge.svg)
 
 ### Описание проекта
 
