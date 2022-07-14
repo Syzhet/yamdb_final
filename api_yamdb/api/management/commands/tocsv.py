@@ -30,8 +30,8 @@ class Command(BaseCommand):
         for key in DICT_FLAGS:
             if options[key]:
                 flag = DICT_FLAGS[key]
-                PATH = Path(settings.STATIC_ROOT, 'data', f'{key}.csv')
-                with open(PATH, 'r', encoding='UTF-8') as f:
+                path_to = Path(settings.STATIC_ROOT, 'data', f'{key}.csv')
+                with open(path_to, 'r', encoding='UTF-8') as f:
                     data = csv.DictReader(f, delimiter=',',
                                           skipinitialspace=True
                                           )
