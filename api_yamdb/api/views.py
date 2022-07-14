@@ -158,18 +158,18 @@ class AdminListCreateUser(viewsets.ModelViewSet):
             user = request.user
             serializer = AdminModerUsersSerializer(user)
             return Response(serializer.data, status=HTTP_200_OK)
-        elif request.method == 'PATCH':
-            username = request.user.username
-            user = get_object_or_404(User, username=username)
-            serializer = AdminModerUsersSerializer(
-                user,
-                request.data,
-                partial=True
-            )
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data, status=HTTP_200_OK)
-            return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
+        request.method == 'PATCH':
+        username = request.user.username
+        user = get_object_or_404(User, username=username)
+        serializer = AdminModerUsersSerializer(
+            user,
+            request.data,
+            partial=True
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=HTTP_200_OK)
+        return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
 
 
 class ReviewViewSet(viewsets.ModelViewSet):
