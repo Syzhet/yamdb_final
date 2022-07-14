@@ -41,10 +41,9 @@ class User(AbstractUser):
 
     def _generate_jwt_token(self):
         refresh = RefreshToken.for_user(self)
-        token = {
+        return {
             'token': str(refresh.access_token),
         }
-        return token
 
 
 class Category(models.Model):

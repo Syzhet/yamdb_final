@@ -61,9 +61,9 @@ class GenreViewSet(viewsets.ModelViewSet):
         lookup_field='slug', url_name='genre_slug'
     )
     def get_genre(self, request, slug):
-        Genre = self.get_object()
-        serializer = GenreSerializer(Genre)
-        Genre.delete()
+        genre = self.get_object()
+        serializer = GenreSerializer(genre)
+        genre.delete()
         return Response(serializer.data, status=HTTP_204_NO_CONTENT)
 
 
@@ -119,10 +119,9 @@ class CreateToken(generics.GenericAPIView):
 
     def get_token(self, user):
         refresh = RefreshToken.for_user(user)
-        token = {
+        return {
             'token': str(refresh.access_token),
         }
-        return token
 
     def post(self, request):
         serializer = TokenSerializer(data=request.data)
