@@ -173,14 +173,14 @@ http://127.0.0.1:8000/api/v1/titles/{title_id}/reviews/{review_id}/
 
 ## Шаблон наполнения env файла:
 
-DB_ENGINE=django.db.backends.postgresql
-DB_NAME=postgres
-POSTGRES_USER=login
-POSTGRES_PASSWORD=password
-DB_HOST=db
-DB_PORT=5432
-EMAIL_HOST_USER=your_adress@your_domen.com
-MAIL_HOST_PASSWORD=email_password
+- DB_ENGINE=django.db.backends.postgresql
+- DB_NAME=postgres
+- POSTGRES_USER=login
+- POSTGRES_PASSWORD=password
+- DB_HOST=db
+- DB_PORT=5432
+- EMAIL_HOST_USER=your_adress@your_domen.com
+- MAIL_HOST_PASSWORD=email_password
 
 ## Описание команд для запуска приложения в контейнерах:
 
