@@ -1,6 +1,6 @@
 ## Проект yamdb_final
 
-![yamdb-workflows Actions Status](https://github.com/Syzhet/yamdb_final/blob/master/.github/workflows/yamdb_workflow.yml)
+![yamdb-workflows Actions Status](https://github.com/Syzhet/yamdb_final/blob/master/.github/workflows/yamdb_workflow.yml/badge.svg)
 
 ## Стек технологий 
 
