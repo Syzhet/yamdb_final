@@ -185,21 +185,21 @@ http://127.0.0.1:8000/api/v1/titles/{title_id}/reviews/{review_id}/
 ## Описание команд для запуска приложения в контейнерах:
 
 Запускаем контейнеры при помощи docker-compose:
-'''sh
+```sh
 sudo docker-compose up -d --build
-'''
+```
 
 Выполняем миграции в запущенном контейнере web:
-'''sh
+```sh
 sudo docker-compose exec web python manage.py migrate
-'''
+```
 
 Создаем суперпользователя для управления проектом через админку:
-'''sh
+```sh
 sudo docker-compose exec web python manage.py createsuperuser
-'''
+```
 
 Собираем статику в папку static/:
-'''sh
+```sh
 sudo docker-compose exec web python manage.py collectstatic --no-input
-'''
+```
