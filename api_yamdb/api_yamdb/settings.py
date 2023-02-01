@@ -9,8 +9,7 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
-
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = False
 
@@ -130,8 +129,8 @@ SIMPLE_JWT = {
 }
 
 
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = 465
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.yandex.ru')
+EMAIL_PORT = os.getenv('EMAIL_PORT', 465)
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', 'admin@admin.ru')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'admin')
 EMAIL_USE_TLS = False
